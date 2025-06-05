@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameVault</title>
+  <style>
+    body {
+      background-color: #2e2e2e;
+      color: white;
+    }
+    .logo {
+      
+    }
+    .top-bar{
+      display: flex;
+      border-bottom: 2px solid #353535;
+      border-bottom-width: 100%;
+      border-radius: 0px;
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    }
+    .search {
+      width: 200px;
+      height: 20px;
+      outline: 0px;
+      border-radius: 5px;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #3f3f3f;
+    }
+    .container{
+      flex-wrap: wrap;
+      margin-top: 40px;
+      padding: 10px;
+      display: flex;
+      gap: 27px;
+      margin-left: 30px;
+    }
+    .game {
+      width: 110px;
+      padding: 10px;
+      border-radius: 15px;
+      color: white;
+      border: 0px solid #353535;
+      background-color: #3f3f3f;
+      margin: 0px;
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .game-title {
+      text-align: center;
+    }
+    .gamelogo {
+      border-radius: 15px;
+      box-shadow:0px 1px 1px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+  <div class="logo">
+  <img src="media/gvlogo.png" width="100">
+  </div>
+   <input type="text" class="search" placeholder="search">
+  </div>
+  <div class="container">
+  <div class="game">
+    <img src="media/mcpe.png" width="90px" height="90px" mcicon alt="" class="gamelogo">
+    <h4 class="game-title">Minecraft</h4>
+  </div>
+  <div class="game">
+    <img src="media/gtasa.png" width="90px" height="90px" alt="" class="gamelogo">
+    <h4 class="game-title">GTA:SA</h4>
+  </div>
+    <div class="game">
+    <img src="media/hollowknight.jpeg" width="90px" height="90px" alt="" class="gamelogo">
+    <h4 class="game-title">Hollow Knight(port)</h4>
+  </div>
+  </div>
+</body>
+</html>
