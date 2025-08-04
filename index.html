@@ -1,84 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GameVault</title>
   <style>
     body {
       background-color: #2e2e2e;
       color: white;
+      font-family: sans-serif;
+      margin: 0;
     }
-    .logo {
-      
-    }
-    .top-bar{
+
+    .top-bar {
       display: flex;
-      border-bottom: 2px solid #353535;
-      border-bottom-width: 100%;
-      border-radius: 0px;
-      box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
-    }
-    .search {
-      width: 200px;
-      height: 20px;
-      outline: 0px;
-      border-radius: 5px;
-      margin-top: 20px;
-      margin-left: 20px;
-      background-color: #3f3f3f;
-    }
-    .container{
-      flex-wrap: wrap;
-      margin-top: 40px;
-      padding: 10px;
-      display: flex;
-      gap: 27px;
-      margin-left: 30px;
-    }
-    .game {
-      width: 110px;
-      padding: 10px;
-      border-radius: 15px;
-      color: white;
-      border: 0px solid #353535;
-      background-color: #3f3f3f;
-      margin: 0px;
-      box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-bottom: 2px solid #353535;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .search {
+      width: 250px;
+      height: 30px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3f3f3f;
+      color: white;
+    }
+
+    .container {
       display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
     }
-    .game-title {
-      text-align: center;
-    }
-    .gamelogo {
+
+    .game {
+      width: 130px;
+      background-color: #3f3f3f;
       border-radius: 15px;
-      box-shadow:0px 1px 1px rgba(0,0,0,0.2);
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      flex-direction: column;
+    }
+
+    .game:hover {
+      transform: scale(1.05);
+    }
+
+    .gamelogo {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .game-title {
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .search {
+        width: 90%;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
     }
   </style>
 </head>
 <body>
   <div class="top-bar">
-  <div class="logo">
-  <img src="media/gvlogo.png" width="100">
+    <div class="logo">
+      <img src="media/ alt="GameVault Logo" />
+    </div>
+    <input type="text" class="search" placeholder="Buscar jogos..." />
+    <nav class="menu">
+  <a href="#home">Home</a>
+</nav>
   </div>
-   <input type="text" class="search" placeholder="search">
-  </div>
+
   <div class="container">
-  <div class="game">
-    <img src="media/mcpe.jpeg" width="90px" height="90px" mcicon alt="" class="gamelogo">
-    <h4 class="game-title">Terraria</h4>
-  </div>
-  <div class="game">
-    <img src="media/gtasa.png" width="90px" height="90px" alt="" class="gamelogo">
-    <h4 class="game-title">GTA:SA</h4>
-  </div>
+    <div class="game" onclick="window.location.href='https://www.mediafire.com/file/3wpslcmuac34knh/Terraria-v1.4.4.9.6-(ofc).apk/file';">
+      <img src="media/mcpe.jpeg" class="gamelogo" alt="Terraria" />
+      <h4 class="game-title">Terraria</h4>
+    </div>
+
+    <div class="game" onclick="window.location.href='https://drive.google.com/file/d/1DSBiY4KQmUDR4uWA2fHp4V0NUt1Z-Nuf/view?usp=drivesdk';">
+      <img src="media/gtasa.png" class="gamelogo" alt="GTA:SA" />
+      <h4 class="game-title">GTA:SA</h4>
+    </div>
+
+    <div class="game" onclick="window.location.href='https://www.mediafire.com/file/4dvyqvf630yag66/hk-1-2.apk/file';">
+      <img src="media/hollowknight.jpeg" class="gamelogo" alt="Hollow Knight" />
+      <h4 class="game-title">Hollow Knight (port)</h4>
+    </div>
+
+    <div class="game" onclick="window.location.href='https://www.mediafire.com/file/ku6nwxg3j3mn1fq/Dead-Cells-v3.5.6-CLZINZX.apk.apk/file';">
+      <img src="media/deadcells.jpeg" class="gamelogo" alt="Dead Cells" />
+      <h4 class="game-title">Dead Cells</h4>
+    </div>
+
     <div class="game">
-    <img src="media/hollowknight.jpeg" width="90px" height="90px" alt="" class="gamelogo">
-    <h4 class="game-title">Hollow Knight(port)</h4>
+      <img src="media/SotN.jpeg" class="gamelogo" alt="Castlevania SotN" />
+      <h4 class="game-title">Castlevania SotN</h4>
+    </div>
+
+    <div class="game">
+      <img src="media/limbo.jpeg" class="gamelogo" alt="Limbo" />
+      <h4 class="game-title">Limbo</h4>
+    </div>
   </div>
-  </div>
+  <script>
+    const searchInput = document.querySelector('.search');
+const games = document.querySelectorAll('.game');
+
+searchInput.addEventListener('input', function () {
+  const query = this.value.toLowerCase();
+
+  games.forEach(game => {
+    const title = game.querySelector('.game-title').textContent.toLowerCase();
+    game.style.display = title.includes(query) ? 'flex' : 'none';
+  });
+});
+
+  </script>
 </body>
 </html>
